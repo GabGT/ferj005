@@ -1,15 +1,15 @@
 @font-face {
-  font-family: "Lato";
-  src: url("./assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-family: "Lato-Regular";
+  src: url("/assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Lato";
+  font-family: "Lato-Light";
   font-weight: 200;
-  src: url("./assets/fonts/Lato/Lato-Light.ttf") format("truetype");
+  src: url("/assets/fonts/Lato/Lato-Light.ttf") format("truetype");
 }
 @font-face {
   font-family: "Rock Salt";
-  src: url("./assets/fonts/Rock-Salt/RockSalt-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/Rock-Salt/RockSalt-Regular.ttf") format("truetype");
 }
 
 /*# sourceMappingURL=fonts.css.map */

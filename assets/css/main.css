@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -76,17 +77,31 @@ h6 {
 }
 
 @font-face {
-  font-family: "Lato";
-  src: url("./assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-family: "Lato-Regular";
+  src: url("/assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Lato";
+  font-family: "Lato-Light";
   font-weight: 200;
-  src: url("./assets/fonts/Lato/Lato-Light.ttf") format("truetype");
+  src: url("/assets/fonts/Lato/Lato-Light.ttf") format("truetype");
 }
 @font-face {
   font-family: "Rock Salt";
-  src: url("./assets/fonts/Rock-Salt/RockSalt-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/Rock-Salt/RockSalt-Regular.ttf") format("truetype");
+}
+body {
+  font-family: "Lato-Regular";
+}
+body a {
+  color: #fff;
+  text-decoration: none;
+}
+body ul {
+  padding: 0;
+  list-style: none;
+}
+body .hide-mobile {
+  display: none;
 }
 body.open > header .menu-links {
   right: 0;
@@ -105,6 +120,8 @@ body > header .mobile-content {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin: 0 25px;
 }
 body > header .mobile-content .nav-desktop {
   display: none;
@@ -135,6 +152,40 @@ body > header .menu-links ul {
 }
 body > header .menu-links ul li + li {
   margin-top: 40px;
+}
+
+/* //Responsive Web Design - RWD
+1 - O Browser (navegador) deve ter a capacidade de renderizar o site em dispositivos moveis (meta viewport) */
+/* 2 - Definir Breackpoints */
+/* 3- Defina QUAL elemento sofre mudanças, QUANDO e COMO - dentro dos media queries */
+@media (min-width: 768px) {
+  body .show-desktop {
+    display: block;
+  }
+  body .max-width {
+    max-width: 700px !important;
+  }
+  body header .search {
+    position: relative;
+  }
+  body header .search img {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+  }
+  body header .search input {
+    width: 500px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1882352941);
+    color: #fff;
+    padding-left: 50px;
+    outline: 0;
+    border: none;
+    border-radius: 20px;
+  }
+  body header .search input::placeholder {
+    color: #e1e1e1;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
