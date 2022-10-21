@@ -92,6 +92,9 @@ h6 {
 body {
   font-family: "Lato-Regular";
 }
+body .show-desktop {
+  display: none;
+}
 body a {
   color: #fff;
   text-decoration: none;
@@ -153,6 +156,12 @@ body > header .menu-links ul {
 body > header .menu-links ul li + li {
   margin-top: 40px;
 }
+body section.hero {
+  background-image: url("../images/pao-de-acucar-mobile.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+}
 
 /* //Responsive Web Design - RWD
 1 - O Browser (navegador) deve ter a capacidade de renderizar o site em dispositivos moveis (meta viewport) */
@@ -172,6 +181,7 @@ body > header .menu-links ul li + li {
     position: absolute;
     top: 10px;
     left: 15px;
+    width: 24px;
   }
   body header .search input {
     width: 500px;

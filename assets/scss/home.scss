@@ -1,6 +1,10 @@
 body {
   font-family: 'Lato-Regular';
 
+  .show-desktop {
+    display: none;
+  }
+
   a {
     color: #fff;
     text-decoration: none;
@@ -76,6 +80,20 @@ body {
       }
     }
   }
+
+  section.hero {
+    background-image: url('../images/pao-de-acucar-mobile.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+
+    &::before {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      content: '';
+    }
+  }
 }
 
 /* //Responsive Web Design - RWD
@@ -102,6 +120,7 @@ body {
           position: absolute;
           top: 10px;
           left: 15px;
+          width: 24px;
         }
 
         input {
