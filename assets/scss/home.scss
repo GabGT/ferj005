@@ -86,12 +86,92 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     height: 100vh;
+    /* background-size: cover; */
 
     &::before {
       width: 100%;
       height: 100%;
       position: absolute;
       content: '';
+      background-image: linear-gradient(#161618, #16161800);
+    }
+
+    .destak {
+      height: 100vh;
+      position: relative;
+      padding-top: 100px;
+      color: #fff;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 200px);
+
+        .wrapper {
+          h1 {
+            font-size: 50px;
+            display: flex;
+            flex-direction: column;
+
+            span {
+              font-family: 'Rock Salt';
+              font-size: 150px;
+            }
+          }
+
+          h2 {
+            display: none;
+          }
+        }
+      }
+
+      .links {
+        background-color: #131c21;
+        opacity: 0.8;
+        height: 100px;
+
+        .link-item {
+          color: #f2b822;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+
+          svg {
+            fill: #f2b822;
+            margin-right: 22px;
+            height: 48px;
+            width: 48px;
+          }
+
+          h3,
+          h4 {
+            font-weight: 300;
+            margin: 0;
+          }
+
+          h3 {
+            font-size: 25px;
+            line-height: 1;
+          }
+
+          h4 {
+            font-size: 15px;
+            line-height: 1;
+          }
+
+          &:first-child {
+            display: flex;
+          }
+        }
+
+        .arrow {
+          margin-left: 10px;
+        }
+      }
     }
   }
 }
@@ -139,9 +219,63 @@ body {
         }
       }
     }
+
+    section.hero {
+      background-image: url('../images/pao-de-acucar-tablet.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 100vh;
+
+      .destak {
+        .title {
+          position: relative;
+
+          .wrapper {
+            position: relative;
+
+            h1 {
+              flex-direction: row;
+              align-items: center;
+              font-size: 100px;
+
+              span {
+                margin-left: 45px;
+              }
+            }
+
+            h2 {
+              position: absolute;
+              display: flex;
+              bottom: 25px;
+              left: 100px;
+              font-family: 'Lato-Light';
+              text-transform: uppercase;
+              font-size: 15px;
+            }
+          }
+        }
+
+        .links {
+          .link-item {
+            &:nth-child(2) {
+              display: flex;
+              margin-left: 36px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 // DESKTOP
 @media (min-width: 1200px) {
+  body {
+    section.hero {
+      background-image: url('../images/pao-de-acucar-desktop.webp');
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 100vh;
+    }
+  }
 }
