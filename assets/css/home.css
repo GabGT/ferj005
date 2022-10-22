@@ -112,7 +112,7 @@ body section.hero .destak .links {
 }
 body section.hero .destak .links .link-item {
   color: #f2b822;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -142,6 +142,8 @@ body section.hero .destak .links .link-item:first-child {
 }
 body section.hero .destak .links .arrow {
   margin-left: 10px;
+  position: absolute;
+  right: 0;
 }
 
 /* //Responsive Web Design - RWD
