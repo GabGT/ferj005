@@ -94,7 +94,7 @@ body section.hero .destak .title {
   height: calc(100vh - 200px);
 }
 body section.hero .destak .title .wrapper_content .index_slider {
-  /* display: none; */
+  display: none;
 }
 body section.hero .destak .title .wrapper_content .wrapper_title h1 {
   font-size: 50px;
