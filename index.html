@@ -13,7 +13,7 @@
 
 <body>
   <header>
-    <div class="mobile-content">
+    <div class="header-content">
       <a href="#">
         <img src="./assets/images/logo-rjclick.png" alt="logo do rjclick">
       </a>
@@ -23,15 +23,13 @@
         <input type="text" placeholder="Pesquisar ...">
       </div>
 
-      <a href="#" class="hide-desktop" id="close-button">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M2.44998 27.65L0.349976 25.55L11.9 14L0.349976 2.45001L2.44998 0.350006L14 11.9L25.55 0.350006L27.65 2.45001L16.1 14L27.65 25.55L25.55 27.65L14 16.1L2.44998 27.65Z"
-            fill="black" />
+      <a href="#" aria-label="Menu" class="link-menu">
+        <svg class="show-mobile" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+          <path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z" />
         </svg>
       </a>
 
-      <nav class="nav-desktop">
+      <nav class="nav-desktop show-desktop">
         <ul>
           <li>Home</li>
           <li>O Projeto</li>
@@ -328,6 +326,7 @@
       </p>
     </div>
   </footer>
+  <script src="/assets/js/why-choose-us.js"></script>
 
 </body>
 

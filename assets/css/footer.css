@@ -27,7 +27,7 @@ footer .footer-info .links-and-contact .footer-links li {
 }
 footer .footer-info .links-and-contact h3 {
   font-size: 1.6em;
-  color: #f2b822;
+  color: #F2B822;
 }
 footer .footer-info .links-and-contact .contact {
   margin-top: 40px;
@@ -50,6 +50,7 @@ footer .copyright {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -71,13 +72,13 @@ footer .copyright {
     margin-top: unset;
     margin-left: 50px;
   }
-  .social-media {
+  footer .social-media {
     margin: unset;
     width: 300px;
     display: flex;
     justify-content: space-around;
   }
-  .social-media a img {
+  footer .social-media a img {
     width: 40px;
     height: 40px;
   }
