@@ -1,81 +1,74 @@
 @charset "UTF-8";
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
-/*
-  2. Remove default margin
-*/
-* {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+}
+body .show-desktop, body .show-tablet {
+  display: none;
+}
+body a {
+  text-decoration: none;
+  color: #FFF;
+}
+body ul {
+  padding: 0;
   margin: 0;
 }
-
-/*
-  3. Allow percentage-based heights in the application
-*/
-html,
-body {
-  height: 100%;
+body ul li {
+  list-style: none;
+}
+body h1, body h2, body h3, body h4, body h5, body h6, body p {
+  margin: 0;
+}
+body .custom-hr {
+  width: 180px;
+  height: 2px;
+  margin: 0;
+  margin-top: 10px;
+  border-color: #f2b822;
+  background-color: #f2b822;
+}
+body .section-max-width {
+  max-width: 300px;
+  margin: 0 auto;
+}
+body .section-subtitle {
+  font-size: 1.5em;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  background-color: #131c21;
+  color: #fff;
 }
 
-/*
-  Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
-*/
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+@media (min-width: 768px) {
+  body .section-max-width {
+    max-width: 700px;
+  }
+  body .section-subtitle {
+    font-size: 2.5em;
+  }
+  body .show-tablet {
+    display: block;
+  }
 }
-
-/*
-  6. Improve media defaults
-*/
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
+@media (min-width: 1200px) {
+  body .section-max-width {
+    max-width: 1100px;
+  }
+  body .show-desktop {
+    display: block;
+  }
+  body .show-mobile {
+    display: none;
+  }
 }
-
-/*
-  7. Remove built-in form typography styles
-*/
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/*
-  8. Avoid text overflows
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-/*
-  9. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
-
 @font-face {
   font-family: "Lato-Regular";
   src: url("/assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
@@ -396,6 +389,284 @@ body section.hero .destak .links .arrow svg {
   }
   body section.hero .destak .arrow {
     display: none;
+  }
+}
+.popular-places {
+  margin: 0 auto;
+  margin-bottom: 100px;
+  max-width: 300px;
+}
+.popular-places .section-title {
+  text-align: center;
+  margin: 100px 0;
+}
+.popular-places .section-title h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+.popular-places .section-title .custom-hr {
+  margin: 0 auto;
+}
+.popular-places .section-title h3 {
+  font-weight: lighter;
+  font-size: 1em;
+  margin-top: 10px;
+}
+.popular-places .places {
+  margin: 100px 0;
+}
+.popular-places .places .individual-place {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  margin-top: 60px;
+  cursor: pointer;
+}
+.popular-places .places .individual-place .description {
+  height: 160px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(16, 25, 30, 0.5019607843);
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.popular-places .places .individual-place .description .name {
+  display: flex;
+}
+.popular-places .places .individual-place .description .name img {
+  width: 15px;
+  height: 25px;
+}
+.popular-places .places .individual-place .description .name h3 {
+  margin-left: 15px;
+}
+.popular-places .places .individual-place:nth-child(1) {
+  background: url("../images/cristo-redentor.png") no-repeat;
+  background-size: cover;
+}
+.popular-places .places .individual-place:nth-child(2) {
+  background: url("../images/bondinho.png") no-repeat;
+  background-size: cover;
+}
+.popular-places .places .individual-place:nth-child(3) {
+  background: url("../images/maracana.png") no-repeat;
+  background-size: cover;
+}
+.popular-places .places .individual-place:nth-child(4) {
+  background: url("../images/feira-sao-cristovao.png") no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .popular-places {
+    max-width: 700px;
+    width: 100%;
+  }
+  .popular-places .section-title h2 {
+    font-size: 2.5em;
+  }
+  .popular-places .section-title h3 {
+    font-size: 1.5em;
+  }
+  .popular-places .places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .popular-places .places .individual-place {
+    width: 300px;
+  }
+}
+@media (min-width: 1200px) {
+  .popular-places {
+    max-width: 1100px;
+  }
+  .popular-places .places {
+    justify-content: space-around;
+  }
+  .popular-places .places .individual-place {
+    width: 400px;
+  }
+}
+@media (min-width: 1400px) {
+  .popular-places {
+    max-width: 1300px;
+  }
+  .popular-places .section-title h2 {
+    font-size: 2.5em;
+  }
+  .popular-places .section-title h3 {
+    font-size: 2em;
+  }
+  .popular-places .places .individual-place {
+    width: 300px;
+  }
+}
+main .why-choose-us {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 50px 0;
+}
+main .why-choose-us h2 {
+  font-size: 1.6em;
+  margin: 0;
+  margin-bottom: 15px;
+}
+main .why-choose-us .custom-hr {
+  margin: 0 auto;
+}
+main .why-choose-us .reasons {
+  max-width: 300px;
+  margin: 50px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+main .why-choose-us .reasons .reason-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+main .why-choose-us .reasons .reason-item .reason-title h3 {
+  margin: 15px 0;
+}
+main .why-choose-us .reasons .reason-item .reason-title p {
+  margin: 20px 0;
+}
+main .why-choose-us .reasons .reason-item .icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: #505050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .why-choose-us .reasons .reason-item.active {
+  border-bottom: 1px solid #f2b922;
+}
+main .why-choose-us .reasons .reason-item.active .icon {
+  background-color: #fefefd;
+}
+main .why-choose-us .reasons .reason-item.active h3 {
+  color: #f2b922;
+}
+
+@media (min-width: 768px) {
+  main .why-choose-us h2 {
+    font-size: 2.5em;
+  }
+  main .why-choose-us .reasons {
+    max-width: 700px;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  main .why-choose-us .reasons {
+    max-width: 1100px;
+    align-items: center;
+    justify-content: space-around;
+  }
+  main .why-choose-us .reasons .reason-item {
+    width: 300px;
+  }
+}
+main .perfect-vacations {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+main .perfect-vacations .vacation-images {
+  display: flex;
+  justify-content: center;
+}
+main .perfect-vacations .vacation-images div {
+  padding: 10px 10px;
+}
+main .perfect-vacations .vacation-images div img {
+  width: 100%;
+  margin-top: 10px;
+}
+main .perfect-vacations .vacation-images div:nth-child(1) {
+  width: 210px;
+}
+main .perfect-vacations .vacation-images div:nth-child(2) {
+  width: 162px;
+}
+main .perfect-vacations .vacation-text {
+  max-width: 300px;
+  margin: 0 auto;
+}
+main .perfect-vacations .vacation-text h2 {
+  font-size: 1.6em;
+  margin: 0;
+  margin-top: 50px;
+}
+main .perfect-vacations .vacation-text p {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 1em;
+}
+main .perfect-vacations .vacation-text button {
+  width: 120px;
+  height: 40px;
+  background-color: #f2b822;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 52px;
+  font-weight: 300;
+}
+main .perfect-vacations .vacation-text button:hover {
+  background-color: #b58a1e;
+}
+
+@media (min-width: 768px) {
+  main .perfect-vacations {
+    flex-direction: row;
+  }
+  main .perfect-vacations .vacation-images div:nth-child(2) {
+    margin-left: 15px;
+  }
+  main .perfect-vacations .vacation-text h2 {
+    margin-top: 0;
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  main .perfect-vacations {
+    justify-content: space-around;
+  }
+  main .perfect-vacations .vacation-images div:nth-child(1) {
+    width: 325px;
+  }
+  main .perfect-vacations .vacation-images div:nth-child(2) {
+    width: 253px;
+  }
+  main .perfect-vacations .vacation-text {
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  main .perfect-vacations .vacation-text {
+    max-width: 600px;
+    margin-left: 40px;
+  }
+  main .perfect-vacations p {
+    max-width: 300px;
+  }
+}
+@media (min-width: 1400px) {
+  main .perfect-vacations .vacation-text {
+    max-width: 700px;
+  }
+  main .perfect-vacations .vacation-text h2 {
+    max-width: 550px;
+  }
+  main .perfect-vacations .vacation-text p {
+    max-width: 400px;
   }
 }
 

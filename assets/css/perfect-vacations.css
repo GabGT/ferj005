@@ -1,0 +1,97 @@
+main .perfect-vacations {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+main .perfect-vacations .vacation-images {
+  display: flex;
+  justify-content: center;
+}
+main .perfect-vacations .vacation-images div {
+  padding: 10px 10px;
+}
+main .perfect-vacations .vacation-images div img {
+  width: 100%;
+  margin-top: 10px;
+}
+main .perfect-vacations .vacation-images div:nth-child(1) {
+  width: 210px;
+}
+main .perfect-vacations .vacation-images div:nth-child(2) {
+  width: 162px;
+}
+main .perfect-vacations .vacation-text {
+  max-width: 300px;
+  margin: 0 auto;
+}
+main .perfect-vacations .vacation-text h2 {
+  font-size: 1.6em;
+  margin: 0;
+  margin-top: 50px;
+}
+main .perfect-vacations .vacation-text p {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 1em;
+}
+main .perfect-vacations .vacation-text button {
+  width: 120px;
+  height: 40px;
+  background-color: #f2b822;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 52px;
+  font-weight: 300;
+}
+main .perfect-vacations .vacation-text button:hover {
+  background-color: #b58a1e;
+}
+
+@media (min-width: 768px) {
+  main .perfect-vacations {
+    flex-direction: row;
+  }
+  main .perfect-vacations .vacation-images div:nth-child(2) {
+    margin-left: 15px;
+  }
+  main .perfect-vacations .vacation-text h2 {
+    margin-top: 0;
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  main .perfect-vacations {
+    justify-content: space-around;
+  }
+  main .perfect-vacations .vacation-images div:nth-child(1) {
+    width: 325px;
+  }
+  main .perfect-vacations .vacation-images div:nth-child(2) {
+    width: 253px;
+  }
+  main .perfect-vacations .vacation-text {
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  main .perfect-vacations .vacation-text {
+    max-width: 600px;
+    margin-left: 40px;
+  }
+  main .perfect-vacations p {
+    max-width: 300px;
+  }
+}
+@media (min-width: 1400px) {
+  main .perfect-vacations .vacation-text {
+    max-width: 700px;
+  }
+  main .perfect-vacations .vacation-text h2 {
+    max-width: 550px;
+  }
+  main .perfect-vacations .vacation-text p {
+    max-width: 400px;
+  }
+}
+
+/*# sourceMappingURL=perfect-vacations.css.map */

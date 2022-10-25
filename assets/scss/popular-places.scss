@@ -1,0 +1,146 @@
+.popular-places {
+    margin: 0 auto;
+    margin-bottom: 100px;
+    max-width: 300px;
+
+    .section-title {
+        text-align: center;
+        margin: 100px 0;
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .custom-hr {
+            margin: 0 auto;
+        }
+        
+        h3 {
+            font-weight: lighter;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+    }
+
+
+    .places {
+        margin: 100px 0;
+
+
+        .individual-place {
+            width: 100%;
+            height: 350px;
+            position: relative;
+            margin-top: 60px;
+            cursor: pointer;
+
+            .description {
+                height: 160px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                background-color: #10191e80;
+                padding: 0 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .name {
+                    display: flex;
+
+                    img {
+                        width: 15px;
+                        height: 25px;
+                    }
+
+
+                    h3 {
+                        margin-left: 15px;
+                    }
+                }
+
+            }
+
+            &:nth-child(1) {
+                background: url('../images/cristo-redentor.png') no-repeat;
+                background-size: cover;
+            }
+
+            &:nth-child(2) {
+                background: url('../images/bondinho.png') no-repeat;
+                background-size: cover;
+            }
+
+            &:nth-child(3) {
+                background: url('../images/maracana.png') no-repeat;
+                background-size: cover;
+            }
+
+            &:nth-child(4) {
+                background: url('../images/feira-sao-cristovao.png') no-repeat;
+                background-size: cover;
+            }
+
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .popular-places {
+        max-width: 700px;
+        width: 100%;
+
+        .section-title {
+            h2 {
+                font-size: 2.5em;
+            }
+            h3 {
+                font-size: 1.5em;
+            }
+        }
+        .places {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .individual-place {
+                width: 300px;
+            }
+
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .popular-places {
+        max-width: 1100px;
+
+        .places {
+            justify-content: space-around;
+
+            .individual-place {
+                width: 400px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .popular-places {
+        max-width: 1300px;
+        .section-title {
+            h2 {
+                font-size: 2.5em;
+            }
+            h3 {
+                font-size: 2em;
+            }
+        }
+        .places {
+            .individual-place {
+                width: 300px;
+            }
+        }
+    }
+}
