@@ -22,6 +22,7 @@ main .why-choose-us .reasons .reason-item {
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
+  cursor: pointer;
 }
 main .why-choose-us .reasons .reason-item .reason-title h3 {
   margin: 15px 0;
@@ -39,13 +40,13 @@ main .why-choose-us .reasons .reason-item .icon {
   align-items: center;
 }
 main .why-choose-us .reasons .reason-item.active {
-  border-bottom: 1px solid #f2b922;
+  border-bottom: 1px solid #f2b822;
 }
 main .why-choose-us .reasons .reason-item.active .icon {
   background-color: #fefefd;
 }
 main .why-choose-us .reasons .reason-item.active h3 {
-  color: #f2b922;
+  color: #f2b822;
 }
 
 @media (min-width: 768px) {
